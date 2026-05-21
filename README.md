@@ -7,7 +7,7 @@ uma toolbar flutuante junto à seleção com controles de **Play**, **Pause**,
 
 ## Demo
 
-<video src="docs/assets/usage-example.mp4" controls width="640"></video>
+<docs/assets/usage-example.mp4>
 
 ## Funcionalidades
 
