@@ -7,7 +7,7 @@ uma toolbar flutuante junto à seleção com controles de **Play**, **Pause**,
 
 ## Demo
 
-<https://github.com/fyoussef/tomi/raw/main/docs/assets/usage-example.mp4>
+<video src="https://github.com/fyoussef/tomi/raw/main/docs/assets/usage-example.mp4" controls width="640"></video>
 
 ## Funcionalidades
 
