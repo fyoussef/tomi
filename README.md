@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./public/tomi.jpg" alt="Tomi" width="160" />
+</p>
+
 # Tomi — Leitor de Texto
 
 Extensão de browser que lê em voz alta qualquer texto selecionado em qualquer

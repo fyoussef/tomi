@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "Bash(where magick *)",
+      "Bash(where convert *)",
+      "Bash(where ffmpeg *)",
+      "PowerShell(Add-Type -AssemblyName System.Drawing; $src = \"public\\\\tomi.jpg\"; $sizes = @\\(16, 32, 48, 96, 128\\); $img = [System.Drawing.Image]::FromFile\\(\\(Resolve-Path $src\\)\\); foreach \\($size in $sizes\\) { $bmp = New-Object System.Drawing.Bitmap $size, $size; $g = [System.Drawing.Graphics]::FromImage\\($bmp\\); $g.InterpolationMode = [System.Drawing.Drawing2D.InterpolationMode]::HighQualityBicubic; $g.SmoothingMode = [System.Drawing.Drawing2D.SmoothingMode]::HighQuality; $g.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality; $g.CompositingQuality = [System.Drawing.Drawing2D.CompositingQuality]::HighQuality; $g.DrawImage\\($img, 0, 0, $size, $size\\); $out = \"public\\\\icon\\\\$size.png\"; $bmp.Save\\(\\(Join-Path \\(Get-Location\\) $out\\), [System.Drawing.Imaging.ImageFormat]::Png\\); $g.Dispose\\(\\); $bmp.Dispose\\(\\); Write-Output \"Wrote $out\" }; $img.Dispose\\(\\))"
     ]
   }
 }

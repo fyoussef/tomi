@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Power, BookOpenText } from "lucide-react";
+import { Power } from "lucide-react";
+import logo from "/icon/128.png";
 
 const ENABLED_KEY = "enabled";
 
@@ -37,9 +38,11 @@ function App() {
 
       <div className="relative h-full flex flex-col">
         <header className="flex items-center gap-2 px-5 pt-5">
-          <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-white/10 backdrop-blur">
-            <BookOpenText size={16} className="text-white" />
-          </div>
+          <img
+            src={logo}
+            alt="Tomi"
+            className="w-8 h-8 rounded-lg ring-1 ring-white/10 shadow-md"
+          />
           <div>
             <h1 className="text-sm font-semibold tracking-tight leading-none">
               Tomi
