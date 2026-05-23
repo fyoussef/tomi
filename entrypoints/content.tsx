@@ -9,6 +9,16 @@ export default defineContentScript({
   async main(ctx) {
     let ui: Awaited<ReturnType<typeof createShadowRootUi>> | null = null;
     let selectionChanged = false;
+    let enabled = true;
+
+    const initial = await browser.storage.local.get("enabled");
+    enabled = (initial.enabled as boolean | undefined) ?? true;
+
+    browser.storage.onChanged.addListener((changes, area) => {
+      if (area !== "local" || !changes.enabled) return;
+      enabled = (changes.enabled.newValue as boolean | undefined) ?? true;
+      if (!enabled) closeUi();
+    });
 
     function closeUi() {
       ui?.remove();
@@ -29,6 +39,8 @@ export default defineContentScript({
     });
 
     document.addEventListener("mouseup", async (e) => {
+      if (!enabled) return;
+
       const target = e.target as Element | null;
       // Cliques dentro da própria toolbar não devem fechar nem recriar
       if (target?.closest?.("leitor-toolbar")) return;
