@@ -11,7 +11,8 @@ uma toolbar flutuante junto à seleção com controles de **Play**, **Pause**,
 
 ## Demo
 
-[![Demo do Tomi no YouTube](https://img.youtube.com/vi/1XJcdM6UE2A/maxresdefault.jpg)](https://www.youtube.com/watch?v=1XJcdM6UE2A)
+<https://github.com/user-attachments/assets/6969056e-7168-4e65-9507-3352aaf4a3ed>
+
 
 ## Funcionalidades
 
